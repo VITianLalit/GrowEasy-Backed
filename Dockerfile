@@ -5,6 +5,7 @@ COPY package*.json ./
 RUN npm install
 COPY tsconfig.json ./
 COPY src ./src
+COPY api ./api
 RUN npm run build
 
 # --- Production stage ---
@@ -16,4 +17,4 @@ RUN npm install --omit=dev
 COPY --from=builder /app/dist ./dist
 
 EXPOSE 4000
-CMD ["node", "dist/server.js"]
+CMD ["node", "dist/src/server.js"]

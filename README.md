@@ -203,9 +203,15 @@ curl -X POST http://localhost:4000/api/leads/import \
 
 ## Deployment
 
-Any Node host works (Render, Railway, Fly.io, etc.):
+Any Node host works (Render, Railway, Fly.io, Vercel, etc.):
 1. Set the environment variables above in the platform's dashboard.
 2. Build command: `npm run build`
 3. Start command: `npm start`
 
 The included `Dockerfile` is a self-contained multi-stage build if you prefer container deploys.
+
+### Vercel
+
+This repo includes a Vercel-compatible serverless entrypoint at `api/[...path].ts` that reuses the same Express app.
+
+Deploy with the same environment variables configured in Vercel, then use the standard API paths under `/api`.
