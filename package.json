@@ -4,7 +4,7 @@
   "description": "AI-powered CSV Importer backend for GrowEasy CRM - intelligently maps arbitrary CSV formats to CRM lead records using Gemini AI.",
   "main": "dist/src/server.js",
   "engines": {
-    "node": ">=18.0.0"
+    "node": "20.x"
   },
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",

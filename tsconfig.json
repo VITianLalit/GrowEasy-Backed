@@ -16,8 +16,7 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "moduleResolution": "node",
-    "ignoreDeprecations": "6.0"
+    "moduleResolution": "node"
   },
   "include": ["src/**/*.ts", "api/**/*.ts"],
   "exclude": ["node_modules", "dist"]
