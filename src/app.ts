@@ -17,6 +17,15 @@ app.use(
 app.use(morgan(env.NODE_ENV === 'production' ? 'combined' : 'dev'));
 app.use(express.json({ limit: '1mb' }));
 
+app.get('/', (_req, res) => {
+  res.status(200).json({
+    success: true,
+    status: 'ok',
+    service: 'groweasy-csv-importer-backend',
+    health: '/api/health',
+  });
+});
+
 app.use('/api', routes);
 
 app.use(notFoundHandler);
